@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 # shellcheck disable=SC2086,SC1090
 # shellcheck source=/dev/null
 
