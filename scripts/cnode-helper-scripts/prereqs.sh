@@ -1,4 +1,4 @@
-#!/usr/bin/env bash -x
+#!/usr/bin/env bash
 # shellcheck disable=SC2086,SC1090
 # shellcheck source=/dev/null
 
@@ -19,7 +19,7 @@ unset CNODE_HOME
 #INSTALL_VCHC='N'       # Install/Upgrade Vacuumlabs cardano-hw-cli for hardware wallet support
 #CNODE_NAME='cnode'     # Alternate name for top level folder, non alpha-numeric chars will be replaced with underscore (Default: cnode)
 #CURL_TIMEOUT=60        # Maximum time in seconds that you allow the file download operation to take before aborting (Default: 60s)
-#UPDATE_CHECK='Y'       # Check if there is an updated version of prereqs.sh script to download
+UPDATE_CHECK='N'       # Check if there is an updated version of prereqs.sh script to download
 #SUDO='Y'               # Used by docker builds to disable sudo, leave unchanged if unsure.
 
 ######################################
