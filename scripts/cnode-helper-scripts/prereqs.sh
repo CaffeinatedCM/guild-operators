@@ -242,7 +242,7 @@ if [ "$WANT_BUILD_DEPS" = 'Y' ]; then
     echo "Install ghcup (The Haskell Toolchain installer) .."
     # TMP: Dirty hack to prevent ghcup interactive setup, yet allow profile set up
     unset BOOTSTRAP_HASKELL_NONINTERACTIVE
-    curl -s -m ${CURL_TIMEOUT} --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sed -e 's#read.*#answer=Y;next_answer=P;hls_answer=N#' | bash
+    curl -s -m ${CURL_TIMEOUT} --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sed -e 's#read.*#answer=Y;bashrc_answer=P;hls_answer=N#' | bash
   fi
   [ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env"
   if ! ghc --version 2>/dev/null | grep -q ${BOOTSTRAP_HASKELL_GHC_VERSION}; then
