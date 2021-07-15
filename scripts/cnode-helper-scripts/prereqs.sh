@@ -244,7 +244,8 @@ if [ "$WANT_BUILD_DEPS" = 'Y' ]; then
     unset BOOTSTRAP_HASKELL_NONINTERACTIVE
     curl -s -m ${CURL_TIMEOUT} --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sed -e 's#read.*#answer=Y;bashrc_answer=P;hls_answer=N#' | bash
   fi
-  [ -f "${HOME}/.ghcup/env" ] && source "${HOME}/.ghcup/env"
+  echo "source $HOME/.ghcup/env" >> "$HOME"/.bashrc
+  . "${HOME}"/.bashrc
   if ! ghc --version 2>/dev/null | grep -q ${BOOTSTRAP_HASKELL_GHC_VERSION}; then
     echo "Installing GHC v${BOOTSTRAP_HASKELL_GHC_VERSION} .."
     ghcup install ghc ${BOOTSTRAP_HASKELL_GHC_VERSION}
