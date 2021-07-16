@@ -119,10 +119,10 @@ dirs -c # clear dir stack
 CNODE_PATH="/opt/cardano"
 CNODE_HOME=${CNODE_PATH}/${CNODE_NAME}
 CNODE_VNAME=$(echo "$CNODE_NAME" | awk '{print toupper($0)}')
-[[ -z "${BRANCH}" ]] && BRANCH="master"
+[[ -z "${BRANCH}" ]] && BRANCH="alpha"
 
-REPO="https://github.com/cardano-community/guild-operators"
-REPO_RAW="https://raw.githubusercontent.com/cardano-community/guild-operators"
+REPO="https://github.com/CaffeinatedCM/guild-operators"
+REPO_RAW="https://raw.githubusercontent.com/CaffeinatedCM/guild-operators"
 URL_RAW="${REPO_RAW}/${BRANCH}"
 
 # Check if prereqs.sh update is available

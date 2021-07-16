@@ -39,6 +39,7 @@ StandardError=syslog
 SyslogIdentifier=${vname}
 TimeoutStopSec=5
 KillMode=mixed
+Environment=PATH=${HOME}/.cabal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:${PATH}
 
 [Install]
 WantedBy=multi-user.target
